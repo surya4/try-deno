@@ -10,14 +10,16 @@ const variables = {
     host: database.hostname,
     user: database.username,
     database: database.dbname,
-    password: database.password
+    password: database.password,
+    port: database.port
   }
 }
 
 const dbVar = variables[environment]
-console.log("dbVar", dbVar);
 
-client.connectWithUri(`mongodb://${dbVar.hostname}:${dbVar.port}`);
-const db = client.database(dbVar.dbname);
+const uri = `mongodb://${dbVar.host}:${dbVar.port}`
+
+client.connectWithUri(uri);
+const db = client.database(dbVar.database);
 
 export default db

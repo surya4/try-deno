@@ -11,11 +11,8 @@ export const createUserModel = async (data) => {
     .into('users')
     .toString()
 
-  console.info('query1 -->', query.toQuery())
-
   const out = await dexecutor.execute(query)
   return out
-  // return query
 }
 
 export const getDetailsByIdModel = async (id) => {
@@ -23,8 +20,6 @@ export const getDetailsByIdModel = async (id) => {
     .from('users')
     .where('id', '=', id)
 
-  // console.info('query2 -->', query.toQuery())
-  // return query
   const out = await dexecutor.execute(query)
   return out
 }
@@ -34,11 +29,6 @@ export const getDetailsByEmailModel = async (email) => {
     .from('users')
     .where('email', '=', email)
 
-  console.info('query3 -->', query.toQuery())
-  // return query
-
   const out = await dexecutor.execute(query)
-  console.log('out', out)
-  
   return out
 }

@@ -1,2 +1,4 @@
 js/.env
 ts/.env
+*/log.txt
+*/.deno_plugins
