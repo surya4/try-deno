@@ -1,7 +1,7 @@
 import * as bcrypt from 'https://deno.land/x/bcrypt/mod.ts'
 
-// import { createUserModel, getDetailsByIdModel, getDetailsByEmailModel } from '../sql-models/users.js'
-import { createUserModel, getDetailsByIdModel, getDetailsByEmailModel } from '../mongo-models/users.js'
+import { createUserModel, getDetailsByIdModel, getDetailsByEmailModel } from '../sql-models/users.js'
+// import { createUserModel, getDetailsByIdModel, getDetailsByEmailModel } from '../mongo-models/users.js'
 import { successResponse, errorResponse } from '../lib/common/response.js'
 import { validateUserRegister } from '../lib/validations/users.js'
 import { hashSalt } from '../../config/constants.js'

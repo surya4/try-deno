@@ -53,3 +53,9 @@ deno run --allow-write --allow-read --allow-plugin --allow-net --allow-env --uns
 ```deno
 deno test --allow-read --allow-write --allow-env --allow-net tests/index.js
 ```
+
+## Run SQL migration -
+
+```deno
+deno run --allow-net --allow-read https://deno.land/x/nessie/cli.ts migrate -c ../js/config/sql-migration.js
+```

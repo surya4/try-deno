@@ -5,7 +5,7 @@ export const database = {
   username: Deno.env.get('DB_USER'),
   password: Deno.env.get('DB_PASSWORD'),
   dbname: Deno.env.get('DB_DATABASE'),
-  maxPool: parseInt(Deno.env.get('DB_MAX_POOL')) || 50,
+  maxPool: parseInt(Deno.env.get('DB_MAX_POOL')) || 2,
   minPool: parseInt(Deno.env.get('DB_MIN_POOL')) || 1,
   port: Deno.env.get('DB_PORT')
 }

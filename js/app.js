@@ -8,8 +8,12 @@ import usersRoute from './src/routes/users.js'
 // // Logging response method status path time
 // app.use(logger)
 
-// load db
-// import './src/models/index.js'
+// load db migrations
+import './../js/src/sql-models/migrations/index.js'
+
+// // // load db
+import './../js/src/sql-models/index.js'
+
 const app = new App()
 
 app.use('/index', indexRoute)
