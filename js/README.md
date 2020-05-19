@@ -9,11 +9,6 @@
 - **Cache**: redis
 - **ORM**: For mysql - dex based upon knex for query generation, dexcuter for running dex and basic deno_mysql for migrations. For mongo - deno_mongo
 
-### Todo -
-
-1. test cases
-2. create row and table with mysql
-
 ## Sample output
 
 Request -
