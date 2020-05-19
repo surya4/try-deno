@@ -1,7 +1,10 @@
 import * as bcrypt from 'https://deno.land/x/bcrypt/mod.ts'
 
+// use this for mysql
 import { createUserModel, getDetailsByIdModel, getDetailsByEmailModel } from '../sql-models/users.js'
+// use this for mongo
 // import { createUserModel, getDetailsByIdModel, getDetailsByEmailModel } from '../mongo-models/users.js'
+
 import { successResponse, errorResponse } from '../lib/common/response.js'
 import { validateUserRegister } from '../lib/validations/users.js'
 import { hashSalt } from '../../config/constants.js'
@@ -15,7 +18,7 @@ export const createUser = async (reqData) => {
     const validInput = await validateUserRegister(reqData)
     const userExists = await getDetailsByEmailModel(validInput.email)
 
-    if (userExists) {
+    if (userExists && userExists.length) {
       return errorResponse(403, 'userExists')
     }
     validInput.password = bcrypt.hashpw(String(validInput.password), saltRounds)

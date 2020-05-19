@@ -12,23 +12,26 @@ export const createUserModel = async (data) => {
     .toString()
 
   const out = await dexecutor.execute(query)
-  return out
+  return out.rows
 }
 
 export const getDetailsByIdModel = async (id) => {
   const query = dex.select('*')
     .from('users')
     .where('id', '=', id)
+    .toString()
 
   const out = await dexecutor.execute(query)
-  return out
+  return out.rows
 }
 
 export const getDetailsByEmailModel = async (email) => {
-  const query = dex.select('*')
+  const query = dex.select()
     .from('users')
-    .where('email', '=', email)
+    .where({ email })
+    .toString()
+
 
   const out = await dexecutor.execute(query)
-  return out
+  return out.rows
 }

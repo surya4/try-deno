@@ -7,6 +7,7 @@
 - **ORM**: attain
 - **Databases**: mongo and mysql
 - **Cache**: redis
+- **ORM**: For mysql - dex based upon knex for query generation, dexcuter for running dex and basic deno_mysql for migrations. For mongo - deno_mongo
 
 ### Todo -
 
@@ -37,6 +38,27 @@ Mongo Response -
         "password": "$2a$10$h4tkcNq/vfVZ0570axZ9mOtamWqNl6/un28Ocqg3UClnrx5WVVkXS",
         "age": 3
     }
+}
+```
+
+MySQL Response -
+
+```json
+{
+    "success": true,
+    "status": 200,
+    "message": "success",
+    "data": [
+        {
+            "id": 1,
+            "name": "abcd",
+            "email": "abcd",
+            "password": "$2a$10$9k2jtPXkYx1rs3/12Hp6qOPH7itZg4IUFcOfBZ5Pe.MwaWCFESvzy",
+            "age": 3,
+            "created_at": "2020-05-19T16:08:18.000Z",
+            "updated_at": "2020-05-19T16:08:18.000Z"
+        }
+    ]
 }
 ```
 
