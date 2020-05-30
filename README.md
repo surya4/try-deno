@@ -4,7 +4,6 @@
 
 - **Platform:** deno
 - **Framework**: attain
-- **ORM**: attain
 - **Databases**: mongo and mysql
 - **Cache**: redis
 - **ORM**: For mysql - dex based upon knex for query generation, dexcuter for running dex and basic deno_mysql for migrations. For mongo - deno_mongo
